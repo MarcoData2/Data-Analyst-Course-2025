@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar en GitHub Pages | Curso SQL con Marco Díaz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3498db;
+            --secondary: #2c3e50;
+            --accent: #e74c3c;
+            --dark: #1a1a2e;
+            --light: #ecf0f1;
+            --text: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.9));
+            color: var(--text);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(44, 62, 80, 0.9);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        h1 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .logo {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .steps {
+            counter-reset: step-counter;
+            margin: 30px 0;
+        }
+        
+        .step {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 0 8px 8px 0;
+            position: relative;
+            padding-left: 70px;
+        }
+        
+        .step:before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .tip {
+            background: rgba(46, 204, 113, 0.1);
+            border-left: 4px solid var(--success);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .success {
+            color: var(--success);
+            font-weight: bold;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .center {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .link {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--primary);
+        }
+        
+        .link:hover {
+            color: #2980b9;
+            border-bottom: 1px solid #2980b9;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid rgba(52, 152, 219, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .step {
+                padding: 15px 15px 15px 60px;
+            }
+            
+            .step:before {
+                left: 15px;
+                width: 35px;
+                height: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fab fa-github"></i>
+            </div>
+            <h1>Publica tu Página Web con GitHub Pages</h1>
+            <p>Guía completa para alojar tu sitio de forma gratuita</p>
+        </header>
+        
+        <div class="steps">
+            <div class="step">
+                <h3>Crear una cuenta en GitHub</h3>
+                <p>Si no tienes una, ve a <a href="https://github.com" class="link">github.com</a> y regístrate. Es completamente gratis.</p>
+            </div>
+            
+            <div class="step">
+                <h3>Crear un nuevo repositorio</h3>
+                <p>Haz clic en el botón "+" en la esquina superior derecha y selecciona "New repository".</p>
+                <p>Nombra tu repositorio: <strong>nombreusuario.github.io</strong> (reemplaza "nombreusuario" con tu nombre de usuario de GitHub).</p>
+                <p>Esto es importante para que GitHub Pages funcione correctamente.</p>
+            </div>
+            
+            <div class="step">
+                <h3>Subir los archivos de tu página</h3>
+                <p>Una vez creado el repositorio, puedes arrastrar y soltar tu archivo HTML o usar Git desde la terminal:</p>
+                <div class="code-block">
+# Inicializar repositorio local
+git init
+
+# Agregar archivos
+git add .
+
+# Hacer commit
+git commit -m "Primera versión de mi página"
+
+# Agregar el repositorio remoto
+git remote add origin https://github.com/tuusuario/tuusuario.github.io.git
+
+# Subir los archivos
+git push -u origin main
+                </div>
+            </div>
+            
+            <div class="step">
+                <h3>Activar GitHub Pages</h3>
+                <p>Ve a la pestaña "Settings" de tu repositorio, luego en el menú lateral izquierdo selecciona "Pages".</p>
+                <p>En la sección "Source", selecciona la rama "main" (o "master") y haz clic en "Save".</p>
+            </div>
+            
+            <div class="step">
+                <h3>Acceder a tu página</h3>
+                <p>Tu página estará disponible en: <strong>https://tuusuario.github.io</strong></p>
+                <p>Puede tomar unos minutos para que esté disponible después de activar GitHub Pages.</p>
+            </div>
+        </div>
+        
+        <div class="tip">
+            <h3><i class="fas fa-lightbulb"></i> Consejo importante</h3>
+            <p>Asegúrate de que tu archivo principal se llame <strong>index.html</strong> para que GitHub Pages lo reconozca como la página principal.</p>
+        </div>
+        
+        <div class="center">
+            <p class="success">¡Y eso es todo! Tu página estará en línea de forma gratuita.</p>
+            <a href="https://github.com" class="btn" target="_blank">Ir a GitHub</a>
+            <a href="#" class="btn btn-outline">Volver al Curso SQL</a>
+        </div>
+        
+        <div class="tip">
+            <h3><i class="fas fa-exclamation-circle"></i> ¿Problemas con GitHub Pages?</h3>
+            <p>Si tienes dificultades, puedes:</p>
+            <ul>
+                <li>Verificar que el nombre del repositorio sea correcto</li>
+                <li>Esperar unos minutos (a veces tarda en activarse)</li>
+                <li>Consultar la <a href="https://docs.github.com/es/pages" class="link">documentación oficial de GitHub Pages</a></li>
+            </ul>
+        </div>
+        
+        <footer>
+            <p>© 2023 Curso de SQL con Marco Díaz | Publicado con GitHub Pages</p>
+        </footer>
+    </div>
+</body>
+</html>
