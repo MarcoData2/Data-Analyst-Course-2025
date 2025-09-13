@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurar GitHub Pages Correctamente</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3498db;
+            --secondary: #2c3e50;
+            --accent: #e74c3c;
+            --dark: #1a1a2e;
+            --light: #ecf0f1;
+            --text: #f8f9fa;
+            --success: #2ecc71;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.9));
+            color: var(--text);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(44, 62, 80, 0.9);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        h1 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .logo {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .problem-section {
+            background: rgba(231, 76, 60, 0.1);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .solution-section {
+            background: rgba(46, 204, 113, 0.1);
+            border-left: 4px solid var(--success);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .steps {
+            counter-reset: step-counter;
+            margin: 30px 0;
+        }
+        
+        .step {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 0 8px 8px 0;
+            position: relative;
+            padding-left: 70px;
+        }
+        
+        .step:before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .screenshot {
+            max-width: 100%;
+            border: 2px solid var(--primary);
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .center {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .link {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--primary);
+        }
+        
+        .link:hover {
+            color: #2980b9;
+            border-bottom: 1px solid #2980b9;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid rgba(52, 152, 219, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .step {
+                padding: 15px 15px 15px 60px;
+            }
+            
+            .step:before {
+                left: 15px;
+                width: 35px;
+                height: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fab fa-github"></i>
+            </div>
+            <h1>Solución: Configurar GitHub Pages Correctamente</h1>
+            <p>Has estado en la sección incorrecta de GitHub. Aquí te explico cómo llegar al lugar adecuado.</p>
+        </header>
+        
+        <div class="problem-section">
+            <h3><i class="fas fa-exclamation-triangle"></i> Problema Detectado</h3>
+            <p>Por tus capturas de pantalla, veo que estás en la sección de <strong>Configuración de tu Perfil</strong> (Settings de tu cuenta personal), pero necesitas ir a la configuración de tu <strong>repositorio específico</strong>.</p>
+        </div>
+        
+        <div class="solution-section">
+            <h3><i class="fas fa-check-circle"></i> Solución</h3>
+            <p>Sigue estos pasos para configurar GitHub Pages correctamente:</p>
+        </div>
+        
+        <div class="steps">
+            <div class="step">
+                <h3>Ve a tu repositorio</h3>
+                <p>Desde la página principal de GitHub, haz clic en tu foto de perfil (esquina superior derecha) y selecciona "Your repositories".</p>
+                <p>O ve directamente a: <strong>https://github.com/tuusuario?tab=repositories</strong></p>
+            </div>
+            
+            <div class="step">
+                <h3>Selecciona el repositorio correcto</h3>
+                <p>Haz clic en el repositorio que quieres publicar (debe llamarse <strong>tuusuario.github.io</strong>).</p>
+                <p>Si no lo has creado aún, haz clic en "New" para crear un nuevo repositorio con ese nombre exacto.</p>
+            </div>
+            
+            <div class="step">
+                <h3>Ve a la configuración del repositorio</h3>
+                <p>Dentro de tu repositorio, haz clic en la pestaña <strong>"Settings"</strong> (no la de tu perfil, la del repositorio).</p>
+                <img src="https://docs.github.com/assets/cb-11427/images/help/repository/repo-actions-settings.png" alt="Pestaña Settings del repositorio" class="screenshot" style="background:white;padding:10px;">
+            </div>
+            
+            <div class="step">
+                <h3>Encuentra la sección Pages</h3>
+                <p>En el menú lateral izquierdo, desplázate hacia abajo hasta encontrar la sección <strong>"Pages"</strong>.</p>
+                <img src="https://docs.github.com/assets/cb-33227/images/help/pages/pages-tab.png" alt="Sección Pages en Settings" class="screenshot" style="background:white;padding:10px;">
+            </div>
+            
+            <div class="step">
+                <h3>Configura GitHub Pages</h3>
+                <p>En "Source", selecciona la rama <strong>"main"</strong> (o "master") y haz clic en <strong>"Save"</strong>.</p>
+                <img src="https://docs.github.com/assets/cb-1
