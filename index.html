@@ -170,6 +170,55 @@ color: var(--primary);
 margin-bottom: 15px;
 text-shadow: 0 0 10px var(--glow);
         }
+.pagos-section {
+text-align: center;
+padding: 40px 20px;
+background: rgba(26, 26, 46, 0.8);
+border-radius: 10px;
+margin: 40px 0;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+.pagos-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 30px;
+margin-top: 20px;
+        }
+.pagos-card {
+background: #1a1a3a;
+border-radius: 15px;
+padding: 30px;
+text-align: center;
+box-shadow: 0 0 20px rgba(0,162,255,0.2);
+transition: transform 0.3s, box-shadow 0.3s;
+        }
+.pagos-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 0 30px rgba(0,162,255,0.5);
+        }
+.pagos-icon {
+font-size: 3em;
+color: #00a2ff;
+margin-bottom: 20px;
+        }
+.pagos-title {
+font-size: 1.8em;
+margin-bottom: 10px;
+        }
+.pagos-desc {
+font-size: 1.1em;
+margin-bottom: 20px;
+color: #d0d0d0;
+        }
+.pagos-price {
+font-size: 2em;
+color: #00ff85;
+margin-bottom: 15px;
+        }
+.pagos-packages {
+font-size: 0.9em;
+color: #a0d0ff;
+        }
 .social-section {
 text-align: center;
 padding: 30px;
@@ -285,6 +334,9 @@ text-align: center;
 .features {
 grid-template-columns: 1fr;
             }
+.pagos-grid {
+grid-template-columns: 1fr;
+            }
         }
 </style>
 </head>
@@ -320,7 +372,7 @@ grid-template-columns: 1fr;
 <div class="cta-section">
 <h2>¿Listo para impulsar tu carrera en análisis de datos e ingenieria de datos?</h2>
 <p>Aprende SQL con un profesional que ha trabajado en las empresas más importantes del mundo</p>
-<a href="Pagos.html" class="cta-button">¡Inscríbete al Curso Ahora!</a>
+<a href="#pagos" class="cta-button">¡Inscríbete al Curso Ahora!</a>
 <p>Oferta especial por lanzamiento - 50% de descuento</p>
 </div>
 <h2 style="text-align: center; margin: 40px 0 20px; color: var(--primary); text-shadow: 0 0 10px var(--glow);">¿Qué aprenderás en este curso?</h2>
@@ -366,6 +418,63 @@ grid-template-columns: 1fr;
 </div>
 <h3>Preparación Laboral</h3>
 <p>Consejos para conseguir empleo y destacar en entrevistas técnicas.</p>
+</div>
+</div>
+<div class="pagos-section" id="pagos">
+<h2 style="text-align: center; margin-bottom: 20px; color: var(--primary); text-shadow: 0 0 10px var(--glow);">Plan de Cobros Personalizado - CDMX 2025</h2>
+<p style="text-align: center; margin-bottom: 40px;">Tarifas competitivas para consultoría y mentoría en datos, adaptadas al mercado mexicano. ¡Impulsa tu carrera con un experto de talla mundial!</p>
+<div class="pagos-grid">
+<div class="pagos-card">
+<div class="pagos-icon">🗃️</div>
+<h3 class="pagos-title">Consultoría en SQL & Bases de Datos</h3>
+<p class="pagos-desc">Consultas avanzadas, stored procedures, optimización de queries.</p>
+<p class="pagos-price">$600 MXN / hora</p>
+<p class="pagos-packages">Paquetes: 5h - $2,700 (10% off) | 10h - $5,100 (15% off)</p>
+</div>
+<div class="pagos-card">
+<div class="pagos-icon">🐍</div>
+<h3 class="pagos-title">Desarrollo Python para Data Science</h3>
+<p class="pagos-desc">Análisis con pandas, NumPy, scikit-learn; ETL personalizado.</p>
+<p class="pagos-price">$650 MXN / hora</p>
+<p class="pagos-packages">Paquetes: 5h - $2,925 (10% off) | 10h - $5,525 (15% off)</p>
+</div>
+<div class="pagos-card">
+<div class="pagos-icon">📊</div>
+<h3 class="pagos-title">Visualización con Power BI</h3>
+<p class="pagos-desc">Dashboards interactivos, reports profesionales.</p>
+<p class="pagos-price">$550 MXN / hora</p>
+<p class="pagos-packages">Paquetes: 5h - $2,475 (10% off) | 10h - $4,675 (15% off)</p>
+</div>
+<div class="pagos-card">
+<div class="pagos-icon">⚙️</div>
+<h3 class="pagos-title">Ingeniería de Datos & ETL</h3>
+<p class="pagos-desc">Diseño de flujos, manejo de grandes volúmenes en nube.</p>
+<p class="pagos-price">$700 MXN / hora</p>
+<p class="pagos-packages">Paquetes: 5h - $3,150 (10% off) | 10h - $5,950 (15% off)</p>
+</div>
+<div class="pagos-card">
+<div class="pagos-icon">🤖</div>
+<h3 class="pagos-title">IA Generativa & Análisis Avanzado</h3>
+<p class="pagos-desc">Implementación de modelos AI en GCP/AWS/Azure.</p>
+<p class="pagos-price">$750 MXN / hora</p>
+<p class="pagos-packages">Paquetes: 5h - $3,375 (10% off) | 10h - $6,375 (15% off)</p>
+</div>
+<div class="pagos-card">
+<div class="pagos-icon">💼</div>
+<h3 class="pagos-title">Preparación Laboral & Mentoría</h3>
+<p class="pagos-desc">Consejos para CV, entrevistas técnicas, proyectos prácticos.</p>
+<p class="pagos-price">$500 MXN / hora</p>
+<p class="pagos-packages">Paquete Carrera: 10h + CV Review - $4,500 (10% off)</p>
+</div>
+</div>
+<div class="notes">
+<h3>Notas Importantes:</h3>
+<ul>
+<li>Tarifas incluyen IVA (16%).</li>
+<li>Descuentos por paquetes con pago anticipado.</li>
+<li>Sesiones virtuales o presenciales en CDMX (traslados extra si aplican).</li>
+<li>Basado en tasas freelance senior en CDMX 2025 ($400-800 MXN/h).</li>
+</ul>
 </div>
 </div>
 <div class="social-section">
