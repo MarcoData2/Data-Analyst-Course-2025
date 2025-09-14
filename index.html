@@ -131,7 +131,7 @@ font-size: 1.2rem;
 font-weight: bold;
 margin: 20px 0;
 transition: all 0.3s ease;
-box-shadow: 极速赛车开奖直播 0 5px 15px rgba(255, 0, 255, 0.4);
+box-shadow: 0 5px 15px rgba(255, 0, 255, 0.4);
 animation: pulse 2s infinite;
         }
 .cta-button:hover {
@@ -150,7 +150,7 @@ border-radius: 10px;
 padding: 25px;
 text-align: center;
 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-transition: transform 极速赛车开奖直播 0.3s ease;
+transition: transform 0.3s ease;
 opacity: 0;
 animation: fadeIn 0.5s forwards;
         }
@@ -206,7 +206,7 @@ box-shadow: 0 0 10px var(--glow);
 transform: scale(1.1);
 background: var(--primary);
 color: white;
-box-shadow: 0 极速赛车开奖直播 0 20px var(--glow);
+box-shadow: 0 0 20px var(--glow);
         }
 footer {
 text-align: center;
@@ -214,57 +214,50 @@ padding: 20px;
 margin-top: 40px;
 border-top: 1px solid rgba(0, 191, 255, 0.3);
         }
-
 /* Estilos para los logos personalizados */
 .python-logo, .powerbi-logo {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  text-shadow: 0 0 10px var(--glow);
-  display: inline-block;
-  position: relative;
+font-size: 2.5rem;
+margin-bottom: 15px;
+text-shadow: 0 0 10px var(--glow);
+display: inline-block;
+position: relative;
 }
-
 .python-logo {
-  color: #306998;
-  text-shadow: 0 0 10px rgba(48, 105, 152, 0.7);
+color: #306998;
+text-shadow: 0 0 10px rgba(48, 105, 152, 0.7);
 }
-
 .powerbi-logo {
-  color: #F2C811;
-  text-shadow: 0 0 10px rgba(242, 200, 17, 0.7);
+color: #F2C811;
+text-shadow: 0 0 10px rgba(242, 200, 17, 0.7);
 }
-
 .badge-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  margin-right: 8px;
-  border-radius: 50%;
-  background: rgba(0, 191, 255, 0.2);
-  box-shadow: 0 0 5px var(--glow);
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 30px;
+height: 30px;
+margin-right: 8px;
+border-radius: 50%;
+background: rgba(0, 191, 255, 0.2);
+box-shadow: 0 0 5px var(--glow);
 }
-
 /* Estilo para el ícono de X (Twitter) personalizado */
 .x-icon {
-  position: relative;
-  display: inline-block;
-  width: 1em;
-  height: 1em;
+position: relative;
+display: inline-block;
+width: 1em;
+height: 1em;
 }
-
 .x-icon::before {
-  content: "X";
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  font-size: 1.2em;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+content: "X";
+font-family: Arial, sans-serif;
+font-weight: bold;
+font-size: 1.2em;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
 }
-
 @keyframes pulse {
 0% { transform: scale(1); }
 50% { transform: scale(1.05); }
@@ -313,7 +306,6 @@ grid-template-columns: 1fr;
 <p>Senior Data Specialist | Support Engineer</p>
 <p>Geophysical Engineer | Microsoft Certified Data Analyst</p>
 <p>Data Engineer | Business Analyst</p>
-
 <div class="badges">
 <span class="badge"><span class="badge-icon"><i class="fab fa-python python-logo" style="font-size: 1rem;"></i></span>Python</span>
 <span class="badge"><span class="badge-icon"><i class="fas fa-code"></i></span>SQL</span>
@@ -328,14 +320,14 @@ grid-template-columns: 1fr;
 <div class="cta-section">
 <h2>¿Listo para impulsar tu carrera en análisis de datos e ingenieria de datos?</h2>
 <p>Aprende SQL con un profesional que ha trabajado en las empresas más importantes del mundo</p>
-<a href="#" class="cta-button">¡Inscríbete al Curso Ahora!</a>
+<a href="Pagos.html" class="cta-button">¡Inscríbete al Curso Ahora!</a>
 <p>Oferta especial por lanzamiento - 50% de descuento</p>
 </div>
 <h2 style="text-align: center; margin: 40px 0 20px; color: var(--primary); text-shadow: 0 0 10px var(--glow);">¿Qué aprenderás en este curso?</h2>
 <div class="features">
 <div class="feature-card">
 <div class="feature-icon">
-<i class="fas极速赛车开奖直播 fa-code"></i>
+<i class="fas fa-code"></i>
 </div>
 <h3>SQL desde Cero</h3>
 <p>Domina consultas, stored procedures, triggers, funciones y vistas con ejercicios prácticos.</p>
@@ -402,13 +394,12 @@ grid-template-columns: 1fr;
 <p>Desarrollado para futuros expertos en datos y tecnología.</p>
 </footer>
 </div>
-
 <script>
 // Detectar si el ícono de X no se carga y mostrar alternativa
 document.addEventListener('DOMContentLoaded', function() {
-    const xIcon = document.querySelector('.fa-x-twitter');
-    if (xIcon && getComputedStyle(xIcon, '::before').content === 'none') {
-        xIcon.classList.add('x-icon');
+const xIcon = document.querySelector('.fa-x-twitter');
+if (xIcon && getComputedStyle(xIcon, '::before').content === 'none') {
+xIcon.classList.add('x-icon');
     }
 });
 </script>
