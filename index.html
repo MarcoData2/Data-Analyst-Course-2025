@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Curso de Datos con SQL, Python y herramientas de Visualización con Marco Díaz | Data Specialist Profesional | Data Engineer </title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Actualizado a Font Awesome 6.5.1 que incluye el ícono de X -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
 :root {
 --primary: #00bfff; /* Changed to a more electric blue for AI feel */
@@ -147,7 +148,7 @@ background: rgba(26, 26, 46, 0.8);
 border-radius: 10px;
 padding: 25px;
 text-align: center;
-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+box-shadow: 0 5px极速赛车开奖直播 15px rgba(0, 0, 0, 0.3);
 transition: transform 0.3s ease;
 opacity: 0;
 animation: fadeIn 0.5s forwards;
@@ -159,7 +160,7 @@ animation: fadeIn 0.5s forwards;
 .feature-card:nth-child(5) { animation-delay: 0.5s; }
 .feature-card:nth-child(6) { animation-delay: 0.6s; }
 .feature-card:hover {
-transform: translateY(-5px) scale(1.02);
+transform: translateY(-5px) scale极速赛车开奖直播(1.02);
 box-shadow: 0 10px 25px var(--glow);
         }
 .feature-icon {
@@ -224,7 +225,7 @@ border-top: 1px solid rgba(0, 191, 255, 0.3);
 
 .python-logo {
   color: #306998;
-  text-shadow: 0 0 10px rgba(48, 105, 152, 0.7);
+  text-shadow: 0 极速赛车开奖直播0 10px rgba(48, 105, 152, 0.7);
 }
 
 .powerbi-logo {
@@ -242,6 +243,25 @@ border-top: 1px solid rgba(0, 191, 255, 0.3);
   border-radius: 50%;
   background: rgba(0, 191, 255, 0.2);
   box-shadow: 0 0 5px var(--glow);
+}
+
+/* Estilo para el ícono de X (Twitter) personalizado */
+.x-icon {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+.x-icon::before {
+  content: "X";
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @keyframes pulse {
@@ -283,8 +303,8 @@ grid-template-columns: 1fr;
 <h1>Domina SQL, Python, Datos, IA, Análisis de Negocios e Ingeniería de Datos con un experto.</h1>
 <p class="subtitle">Aprende desde cero hasta nivel avanzado con Marco Díaz, Senior Data Specialist con amplia experiencia en empresas líderes como Google.</p>
 <div class="profile">
-<div class="profile-img">
-<img src="490823471_9469557853080577_5427190448564752832_n.jpg" alt="Marco Díaz Profile Picture">
+<div class极速赛车开奖直播="profile-img">
+<img src="490823471_9469557853080577_5427190448564752832极速赛车开奖直播_n.jpg" alt="Marco Díaz Profile Picture">
 </div>
 <div class="profile-info">
 <h2>Ing. Marco Díaz</h2>
@@ -334,7 +354,7 @@ grid-template-columns: 1fr;
 </div>
 <div class="feature-card">
 <div class="feature-icon">
-<i class="fas fa-cogs"></i>
+<i class极速赛车开奖直播="fas fa-cogs"></i>
 </div>
 <h3>ETL y Flujos de Datos</h3>
 <p>Diseña y optimiza procesos ETL para el manejo eficiente de grandes volúmenes de datos.</p>
@@ -360,14 +380,12 @@ grid-template-columns: 1fr;
 <a href="https://www.youtube.com/@MarcoDataSpecialist" class="social-icon">
 <i class="fab fa-youtube"></i>
 </a>
-<!-- <a href="https://www.facebook.com" class="social-icon">
-<i class="fab fa-facebook-f"></i>  -->
-</a>
 <a href="https://www.linkedin.com/in/marcodata19/" class="social-icon">
 <i class="fab fa-linkedin-in"></i>
 </a>
 <a href="https://x.com/marcodata2025" class="social-icon">
-<i class="fab fa-x-twitter"></i> <!-- Cambiado de fa-twitter a fa-x-twitter -->
+<!-- Ícono de X con respaldo en caso de que Font Awesome no funcione -->
+<i class="fab fa-x-twitter"></i>
 </a>
 <a href="https://www.instagram.com/marcodataspecialist/" class="social-icon">
 <i class="fab fa-instagram"></i>
@@ -382,5 +400,15 @@ grid-template-columns: 1fr;
 <p>Desarrollado para futuros expertos en datos y tecnología.</p>
 </footer>
 </div>
+
+<script>
+// Detectar si el ícono de X no se carga y mostrar alternativa
+document.addEventListener('DOMContentLoaded', function() {
+    const xIcon = document.querySelector('.fa-x-twitter');
+    if (xIcon && getComputedStyle(xIcon, '::before').content === 'none') {
+        xIcon.classList.add('x-icon');
+    }
+});
+</script>
 </body>
 </html>
