@@ -212,6 +212,38 @@ padding: 20px;
 margin-top: 40px;
 border-top: 1px solid rgba(0, 191, 255, 0.3);
         }
+
+/* Estilos para los logos personalizados */
+.python-logo, .powerbi-logo {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px var(--glow);
+  display: inline-block;
+  position: relative;
+}
+
+.python-logo {
+  color: #306998;
+  text-shadow: 0 0 10px rgba(48, 105, 152, 0.7);
+}
+
+.powerbi-logo {
+  color: #F2C811;
+  text-shadow: 0 0 10px rgba(242, 200, 17, 0.7);
+}
+
+.badge-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: rgba(0, 191, 255, 0.2);
+  box-shadow: 0 0 5px var(--glow);
+}
+
 @keyframes pulse {
 0% { transform: scale(1); }
 50% { transform: scale(1.05); }
@@ -261,11 +293,11 @@ grid-template-columns: 1fr;
 <p>Data Engineer | Business Analyst</p>
 
 <div class="badges">
-<span class="badge">SQL Expert</span>
-<span class="badge">Python</span>
-<span class="badge">Engineering</span>
-<span class="badge">AI </span>
-<span class="badge">Power BI certified</span>
+<span class="badge"><span class="badge-icon"><i class="fab fa-python python-logo" style="font-size: 1rem;"></i></span>Python</span>
+<span class="badge"><span class="badge-icon"><i class="fas fa-code"></i></span>SQL Expert</span>
+<span class="badge"><span class="badge-icon"><i class="fas fa-cogs"></i></span>Engineering</span>
+<span class="badge"><span class="badge-icon"><i class="fas fa-brain"></i></span>AI </span>
+<span class="badge"><span class="badge-icon"><i class="fas fa-chart-bar powerbi-logo" style="font-size: 1rem;"></i></span>Power BI certified</span>
 </div>
 <p>Experiencia en: <span class="highlight">Eli Lilly, Google Maps, Citibanamex, Malboro, UNAM SSN y Logitech</span></p>
 </div>
@@ -288,7 +320,7 @@ grid-template-columns: 1fr;
 </div>
 <div class="feature-card">
 <div class="feature-icon">
-<i class="fas fa-chart-bar"></i>
+<i class="fas fa-chart-bar powerbi-logo"></i>
 </div>
 <h3>Power BI y Visualización</h3>
 <p>Aprende a crear dashboards interactivos y reports profesionales con Power BI.</p>
@@ -309,10 +341,10 @@ grid-template-columns: 1fr;
 </div>
 <div class="feature-card">
 <div class="feature-icon">
-<i class="fas fa-brain"></i>
+<i class="fab fa-python python-logo"></i>
 </div>
-<h3>Machine Learning</h3>
-<p>Introducción a modelos de ML con Python para análisis predictivo.</p>
+<h3>Python para Data Science</h3>
+<p>Domina Python, pandas, NumPy y scikit-learn para análisis de datos avanzado.</p>
 </div>
 <div class="feature-card">
 <div class="feature-icon">
