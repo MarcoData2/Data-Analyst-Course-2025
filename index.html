@@ -153,6 +153,8 @@ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 transition: transform 0.3s ease;
 opacity: 0;
 animation: fadeIn 0.5s forwards;
+position: relative;
+overflow: hidden;
         }
 .feature-card:nth-child(1) { animation-delay: 0.1s; }
 .feature-card:nth-child(2) { animation-delay: 0.2s; }
@@ -164,6 +166,12 @@ animation: fadeIn 0.5s forwards;
 transform: translateY(-5px) scale(1.02);
 box-shadow: 0 10px 25px var(--glow);
         }
+.feature-image {
+width: 100%;
+height: auto;
+margin-bottom: 20px;
+border-radius: 10px;
+}
 .feature-icon {
 font-size: 2.5rem;
 color: var(--primary);
@@ -326,6 +334,7 @@ grid-template-columns: 1fr;
 <h2 style="text-align: center; margin: 40px 0 20px; color: var(--primary); text-shadow: 0 0 10px var(--glow);">¿Qué aprenderás en este curso?</h2>
 <div class="features">
 <div class="feature-card">
+<img src="data.jpg" alt="SQL desde Cero" class="feature-image">
 <div class="feature-icon">
 <i class="fas fa-code"></i>
 </div>
@@ -333,6 +342,7 @@ grid-template-columns: 1fr;
 <p>Domina consultas, stored procedures, triggers, funciones y vistas con ejercicios prácticos.</p>
 </div>
 <div class="feature-card">
+<img src="PBI.jpg" alt="Power BI y Visualización" class="feature-image">
 <div class="feature-icon">
 <i class="fas fa-chart-bar powerbi-logo"></i>
 </div>
@@ -340,6 +350,7 @@ grid-template-columns: 1fr;
 <p>Aprende a crear dashboards interactivos y reports profesionales con Power BI.</p>
 </div>
 <div class="feature-card">
+<img src="AI.jpg" alt="AI Generativa" class="feature-image">
 <div class="feature-icon">
 <i class="fas fa-cloud"></i>
 </div>
@@ -347,6 +358,7 @@ grid-template-columns: 1fr;
 <p>Aprende a usar inteligencia artificial en la nube (GCP/AWS/AZURE).</p>
 </div>
 <div class="feature-card">
+<img src="data.jpg" alt="ETL y Flujos de Datos" class="feature-image">
 <div class="feature-icon">
 <i class="fas fa-cogs"></i>
 </div>
@@ -354,6 +366,7 @@ grid-template-columns: 1fr;
 <p>Diseña y optimiza procesos ETL para el manejo eficiente de grandes volúmenes de datos.</p>
 </div>
 <div class="feature-card">
+<img src="Python.jpg" alt="Python para Data Science" class="feature-image">
 <div class="feature-icon">
 <i class="fab fa-python python-logo"></i>
 </div>
@@ -361,6 +374,7 @@ grid-template-columns: 1fr;
 <p>Domina Python, pandas, NumPy y scikit-learn para análisis de datos avanzado.</p>
 </div>
 <div class="feature-card">
+<img src="Lastone.jpg" alt="Preparación Laboral" class="feature-image">
 <div class="feature-icon">
 <i class="fas fa-briefcase"></i>
 </div>
